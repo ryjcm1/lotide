@@ -22,20 +22,19 @@ const assertArraysEqual = (arr1, arr2) => {
 
 
 const middle = (arr) => {
-  if(!arr) return;
+  if (!arr) return;
   
-  let arrLength = arr.length
-  if(arrLength <= 2) return [];
+  let arrLength = arr.length;
+  if (arrLength <= 2) return [];
 
-  if(arrLength %2 === 0){
-    return [ arr[arrLength/2 -1], arr[arrLength/2] ]
+  if (arrLength % 2 === 0) {
+    return [ arr[arrLength / 2 - 1], arr[arrLength / 2] ];
+  } else {
+    return [arr[Math.floor(arrLength / 2)]];
   }
-  else{
-    return [arr[Math.floor(arrLength/2)]]
-  }
-}
+};
 
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]) 
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4])
-assertArraysEqual(middle([2, 3]), []) 
-assertArraysEqual(middle([3]), []) 
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+assertArraysEqual(middle([2, 3]), []);
+assertArraysEqual(middle([3]), []);
