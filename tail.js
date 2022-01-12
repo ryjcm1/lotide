@@ -1,7 +1,7 @@
 
 const assertEqual = function(actual, expected) {
   if (actual !== expected) {
-    console.log(`🛑🛑🛑 + Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   }
@@ -33,7 +33,7 @@ assertEqual(originalArr.length, 3); //ensure we get back three elements
 assertEqual(originalArr[0], 1); //ensure first element is equal to 1 and remains unchanged
 assertEqual(originalArr[1], 2); //ensure second element is equal to 2 and remains unchanged
 assertEqual(originalArr[2], 3); //ensure third element exist and is equal to 3
-assertEqual(originalArr[0], result1[0]); //ensure both arrays are different
+assertEqual(originalArr[0], result1[0]); //ensure both arrays are different should FAIL
 
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
