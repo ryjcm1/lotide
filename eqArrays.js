@@ -7,7 +7,11 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) return false;
+
+  //unequal length base case
+  if (arr1.length !== arr2.length){
+    return false
+  }
   else {
     for (let i = 0; i < arr1.length - 1; i++) {
       if (arr1[i] !== arr2[i]) {
