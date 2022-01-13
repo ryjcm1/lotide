@@ -21,37 +21,27 @@ const eqArrays = (arr1, arr2) => {
 };
 
 
-const eqObjects = (obj1, obj2) => {
+//recursive method
+const eqObjects = (obj1, obj2) =>{
+  let keys1 = Object.keys(obj1);
+  let keys2 = Object.keys(obj2);
+  
+  if (keys1.length !== keys2.length) return false;
 
-  const obj1Keys = Object.keys(obj1);
-  const obj2Keys = Object.keys(obj2);
-
-  //check number of keys
-  if (obj1Keys.length !== obj2Keys.length) return false;
-
-
-  for (let keyValue of obj1Keys) {
-
-    //case where key does not exist
-    if (!obj2[keyValue]) return false;
-
-    //key exist and value is an array
-    if (Array.isArray(obj1[keyValue])) {
-      if (!eqArrays(obj2[keyValue], obj1[keyValue])) {
-        return false;
-      }
+  for (let key of keys1) {
+    const current1 = obj1[key];
+    const current2 = obj2[key];
+    
+    if (typeof current1 === 'object' && typeof current2 === 'object') {
+      return eqObjects(current1, current2);
     }
-    //key exist but value is not an array
-    else {
-      if (obj2[keyValue] !== obj1[keyValue]) {
-        return false;
-      }
-    }
+    
+    if (current1 !== current2) return false;
+    
   }
-
+  
   return true;
 };
-
 
 //test cases
 
@@ -94,3 +84,39 @@ const abc = { a: "1", b: "2", c: "3" };
 assertEqual(eqObjects(ab, abc), false); // => false
 
 console.log(eqObjects({ a: '1', b: 2 }, { a: '1', b: 2 }));
+
+
+
+
+//Loop method
+
+// const eqObjects = (obj1, obj2) => {
+
+//   const obj1Keys = Object.keys(obj1);
+//   const obj2Keys = Object.keys(obj2);
+
+//   //check number of keys
+//   if (obj1Keys.length !== obj2Keys.length) return false;
+
+
+//   for (let keyValue of obj1Keys) {
+
+//     //case where key does not exist
+//     if (!obj2[keyValue]) return false;
+
+//     //key exist and value is an array
+//     if (Array.isArray(obj1[keyValue])) {
+//       if (!eqArrays(obj2[keyValue], obj1[keyValue])) {
+//         return false;
+//       }
+//     }
+//     //key exist but value is not an array
+//     else {
+//       if (obj2[keyValue] !== obj1[keyValue]) {
+//         return false;
+//       }
+//     }
+//   }
+
+//   return true;
+// };
