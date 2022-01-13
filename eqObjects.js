@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -23,8 +23,8 @@ const eqArrays = (arr1, arr2) => {
 
 const eqObjects = (obj1, obj2) => {
 
-  const obj1Keys = Object.keys(obj1)
-  const obj2Keys = Object.keys(obj2)
+  const obj1Keys = Object.keys(obj1);
+  const obj2Keys = Object.keys(obj2);
 
   //check number of keys
   if (obj1Keys.length !== obj2Keys.length) return false;
@@ -44,7 +44,7 @@ const eqObjects = (obj1, obj2) => {
     //key exist but value is not an array
     else {
       if (obj2[keyValue] !== obj1[keyValue]) {
-        return false
+        return false;
       }
     }
   }
@@ -63,7 +63,7 @@ const cd = {
 const dc = {
   d: ["2", 3],
   c: "1"
-}
+};
 assertEqual(eqObjects(cd, dc), true); // => should PASS
 
 
@@ -77,12 +77,12 @@ const ac = {
   a: "1",
   b: 2,
   c: [1, "2", 3]
-}
+};
 const ca = {
   a: "3",
   b: 3,
   c: [1, "2", 3]
-}
+};
 assertEqual(eqObjects(ac, ca), false); // => should PASS
 
 
@@ -93,4 +93,4 @@ assertEqual(eqObjects(ab, ba), true); // => true
 const abc = { a: "1", b: "2", c: "3" };
 assertEqual(eqObjects(ab, abc), false); // => false
 
-console.log(eqObjects({ a: '1', b: 2 }, { a: '1', b: 2 }))
+console.log(eqObjects({ a: '1', b: 2 }, { a: '1', b: 2 }));

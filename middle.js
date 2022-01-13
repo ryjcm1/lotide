@@ -2,7 +2,7 @@ const eqArrays = (arr1, arr2) => {
 
   //unequal length base case
   if (arr1.length !== arr2.length) {
-    return false
+    return false;
   } else {
     for (let i = 0; i < arr1.length - 1; i++) {
       if (arr1[i] !== arr2[i]) {
@@ -26,12 +26,12 @@ const assertArraysEqual = (arr1, arr2) => {
 
 const middle = (arr) => {
 
-  let length = arr.length
+  let length = arr.length;
 
   if (!length) return;
   if (length <= 2) return [];
 
-  const midPoint = length / 2
+  const midPoint = length / 2;
 
   if (length % 2 === 0) {
     return [arr[midPoint - 1], arr[midPoint]];
