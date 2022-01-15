@@ -1,11 +1,6 @@
 
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  } else {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual')
+
 
 //strips sentences of all spaces and uncapitalizes every character
 const onlyCharacters = (word) => {
