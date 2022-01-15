@@ -1,4 +1,6 @@
-//recursive method
+const assertEqual = require('./assertEqual');
+
+
 const eqObjects = (obj1, obj2) =>{
   let keys1 = Object.keys(obj1);
   let keys2 = Object.keys(obj2);
@@ -21,6 +23,8 @@ const eqObjects = (obj1, obj2) =>{
 };
 
 
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // > true
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
+
+//test cases
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => should PASS
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); // => should PASS
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }),  false); // => should PASS
