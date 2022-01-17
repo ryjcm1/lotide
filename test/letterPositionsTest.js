@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const letterPositions = require('../letterPositions')
+const letterPositions = require('../letterPositions');
 
 describe('letterPositions', () =>{
   it('Should return {L : [0, 2], H: [1]} when passed in the string - LHL', () =>{
@@ -26,4 +26,4 @@ describe('letterPositions', () =>{
   });
 
 
-})
+});

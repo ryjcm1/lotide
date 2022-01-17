@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const eqArrays = require('../eqArrays')
+const eqArrays = require('../eqArrays');
 
 describe('eqArrays', () =>{
   it('Should return true if passed arrays that are equal', () =>{
@@ -26,4 +26,4 @@ describe('eqArrays', () =>{
   });
 
 
-})
+});

@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const middle = require('../middle')
+const middle = require('../middle');
 
 describe('middle', () =>{
   it('Should return the middle two elments of an array when passed in an array with an even length', () =>{
@@ -29,4 +29,4 @@ describe('middle', () =>{
   });
 
 
-})
+});

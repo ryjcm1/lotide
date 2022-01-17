@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const head = require('../head')
+const head = require('../head');
 
 describe('head', () =>{
   it('Should return the first element when passed in an array of numbers (index 0)', () =>{
@@ -27,4 +27,4 @@ describe('head', () =>{
   });
 
 
-})
+});

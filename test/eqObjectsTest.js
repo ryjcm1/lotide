@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const eqObjects = require('../eqObjects')
+const eqObjects = require('../eqObjects');
 
 describe('eqObjects', () =>{
   it('Should return true if passed arrays that are equal', () =>{
@@ -25,7 +25,7 @@ describe('eqObjects', () =>{
     const input2 = {
       c: "1",
       d: ["2", 3, 4]
-    }
+    };
     const expectedOutput = false;
     assert.equal(eqObjects(input1, input2), expectedOutput);
   });
@@ -39,10 +39,10 @@ describe('eqObjects', () =>{
       c: "1",
       d: ["2", 3, 4],
       e: "5"
-    }
+    };
     const expectedOutput = false;
     assert.equal(eqObjects(input1, input2), expectedOutput);
   });
 
 
-})
+});

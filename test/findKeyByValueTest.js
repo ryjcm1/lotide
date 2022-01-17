@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const findKeyByValue = require('../findKeyByValue')
+const findKeyByValue = require('../findKeyByValue');
 
 describe('findKeyByValue', () =>{
   it('Should return a match when a value matches the input object', () =>{
@@ -27,4 +27,4 @@ describe('findKeyByValue', () =>{
   });
 
 
-})
+});

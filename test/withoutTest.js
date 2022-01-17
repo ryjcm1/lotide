@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const without = require('../without')
+const without = require('../without');
 
 describe('without', () =>{
 
@@ -25,4 +25,4 @@ describe('without', () =>{
   });
 
 
-})
+});

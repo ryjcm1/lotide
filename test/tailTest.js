@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const tail = require('../tail')
+const tail = require('../tail');
 
 describe('tail', () =>{
   it('Should return the last element when passed in an array of numbers', () =>{
@@ -29,4 +29,4 @@ describe('tail', () =>{
   });
 
 
-})
+});

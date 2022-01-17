@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const findKey = require('../findKey')
+const findKey = require('../findKey');
 
 describe('findKey', () =>{
   it('Should return noma when searching for the key of two stars', () =>{
@@ -62,4 +62,4 @@ describe('findKey', () =>{
   });
 
 
-})
+});

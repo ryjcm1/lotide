@@ -1,6 +1,6 @@
 const inspect = require('util').inspect;
 
-const eqObjects = require('./eqObjects')
+const eqObjects = require('./eqObjects');
 
 
 const assertObjectEquals = (actual, expected) => {

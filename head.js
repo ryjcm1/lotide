@@ -1,6 +1,6 @@
 
 const head = (arr) => {
-  if(!arr){
+  if (!arr) {
     throw "Error";
   }
 

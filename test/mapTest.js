@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const map = require('../map')
+const map = require('../map');
 
 describe('map', () =>{
   it('Should return the first character of every string in the array', () =>{
@@ -17,4 +17,4 @@ describe('map', () =>{
   });
 
 
-})
+});

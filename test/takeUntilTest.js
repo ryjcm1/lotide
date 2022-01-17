@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const takeUntil = require('../takeUntil')
+const takeUntil = require('../takeUntil');
 
 describe('takeUntil', () =>{
   it('Should return an array of numbers before a the first value that is less than 0 appears', () =>{
@@ -30,4 +30,4 @@ describe('takeUntil', () =>{
   });
 
 
-})
+});

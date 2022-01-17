@@ -20,5 +20,5 @@ const letterPosition = (sentence) => {
 };
 
 
-module.exports = letterPosition; 
+module.exports = letterPosition;
 

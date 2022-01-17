@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const countLetters = require('../countLetters')
+const countLetters = require('../countLetters');
 
 describe('countLetters', () =>{
   it('Should return {L : 2, H: 1} when passed in the string - LHL', () =>{
@@ -25,4 +25,4 @@ describe('countLetters', () =>{
   
 
 
-})
+});

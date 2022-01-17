@@ -1,7 +1,7 @@
 const chai = require('chai');
 const assert = chai.assert;
 
-const eqArrays = require('../eqArraysRecursive')
+const eqArrays = require('../eqArraysRecursive');
 
 describe('eqArraysRecursive', () =>{
   it('Should return true if passed arrays that are equal', () =>{
@@ -26,4 +26,4 @@ describe('eqArraysRecursive', () =>{
   });
 
 
-})
+});
