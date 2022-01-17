@@ -71,3 +71,6 @@ assertEqual((findKey({
 
 //Case where object is empty
 assertEqual((findKey({}, x => x.type === "metal")), undefined); // should PASS
+
+
+module.exports = findKey;
