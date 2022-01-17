@@ -1,7 +1,7 @@
 {
   "name": "@ryjcm1/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini-clone of the lodash library",
   "main": "assertArraysEqual.js",
   "scripts": {
     "test": "mocha"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/ryjcm1/lotide.git"
   },
-  "author": "",
+  "author": "Jimmy Chuk <jimmychukw@gmail.com> (https://github.com/ryjcm1)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ryjcm1/lotide/issues"
