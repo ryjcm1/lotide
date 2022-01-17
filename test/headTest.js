@@ -11,8 +11,8 @@ describe('head', () =>{
   });
 
   it('Should return the first element when passed in an array of strings (index 0)', () =>{
-    const input = ["Hello", "Lighthouse", "Labs"];
-    const expectedOutput = "Hello";
+    const input = ["5"];
+    const expectedOutput = "5";
     assert.equal(head(input), expectedOutput);
   });
 

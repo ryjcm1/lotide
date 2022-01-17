@@ -1,20 +1,20 @@
 
-const assertEqual = require('./assertEqual')
-
 
 //strips sentences of all spaces and uncapitalizes every character
 const onlyCharacters = (word) => {
   // let cleanedSentence = word.toLowerCase().split(" ").join("").replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-  let cleanedSentence = word.toLowerCase().split(" ").join("");
+  let cleanedSentence = word.split(" ").join("");
   return cleanedSentence;
 };
 
 //counts character occurances in a string of characters
 const countLetters = (characters) => {
 
+  const noSpaces = onlyCharacters(characters);
+
   let countedLetters = {};
 
-  for (let character of characters) {
+  for (let character of noSpaces) {
 
     if (countedLetters[`${character}`]) {
       countedLetters[`${character}`] += 1;
@@ -27,5 +27,4 @@ const countLetters = (characters) => {
 };
 
 
-assertEqual(countLetters(onlyCharacters('LHL'))['l'], 2); //should PASS
-assertEqual(countLetters(onlyCharacters('LHL'))['h'], 1); //should PASS
+module.exports = countLetters;
