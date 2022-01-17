@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 
 const eqObjects = (obj1, obj2) =>{
   let keys1 = Object.keys(obj1);
@@ -12,10 +10,11 @@ const eqObjects = (obj1, obj2) =>{
     const current2 = obj2[key];
     
     if (typeof current1 === 'object' && typeof current2 === 'object') {
-      return eqObjects(current1, current2);
+      if (!eqObjects(current1, current2)){ return false};
+    }else{
+
+      if (obj1[key] !== obj2[key]) return false; 
     }
-    
-    if (current1 !== current2) return false;
     
   }
   
@@ -24,7 +23,5 @@ const eqObjects = (obj1, obj2) =>{
 
 
 
-//test cases
-assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => should PASS
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); // => should PASS
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }),  false); // => should PASS
+
+module.exports = eqObjects;
