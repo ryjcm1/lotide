@@ -32,4 +32,29 @@ describe('countOnly', () =>{
     assert.deepEqual(countOnly(input1, input2), output);
   });
 
+  it('Should return undefined for the key of Karima in the newly outputed array ', () =>{
+    const input1 = [
+      "Karl",
+      "Salima",
+      "Agouhanna",
+      "Fang",
+      "Kavith",
+      "Jason",
+      "Salima",
+      "Fang",
+      "Joe"
+    ];
+
+    const input2 = {
+      "Jason": true,
+      "Fang": true,
+      "Karima": true,
+      "Agouhanna": false
+    };
+
+    
+    assert.isUndefined(countOnly(input1, input2)['Karima']);
+  });
+
+
 })

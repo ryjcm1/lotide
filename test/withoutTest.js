@@ -17,5 +17,12 @@ describe('without', () =>{
     assert.deepEqual(without(input1, input2), expectedOutput);
   });
 
+  it('Should return false when checking if new array contains a value in the array of elements to exclude', () =>{
+    const input1 = [1, 4, 6, 5, 3, 2, 7 ,5];
+    const input2 = [5, 3, 6];
+    const expectedOutput = false;
+    assert.equal(without(input1, input2).includes(5), expectedOutput);
+  });
+
 
 })

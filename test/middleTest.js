@@ -23,7 +23,7 @@ describe('middle', () =>{
   });
 
   it('Should return an empty array when passed an array with a length of two or less', () =>{
-    const input = [];
+    const input = [1, 2];
     const expectedOutput = [];
     assert.deepEqual(middle(input), expectedOutput);
   });
