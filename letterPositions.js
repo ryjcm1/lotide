@@ -22,8 +22,3 @@ const letterPosition = (sentence) => {
 
 module.exports = letterPosition; 
 
-// //test case: hello
-// assertArraysEqual(letterPosition('hello')['h'], [0]); //should PASS
-// assertArraysEqual(letterPosition('hello')['e'], [1]); //should PASS
-// assertArraysEqual(letterPosition('hello')['l'], [2, 3]); //should PASS
-// assertArraysEqual(letterPosition('hello')['o'], [4]); //should PASS
