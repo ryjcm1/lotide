@@ -17,14 +17,6 @@ const eqArrays = (arr1, arr2) => {
   return true;
 };
 
-//Test case 1: equivalent arrays
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-
-//Test case 2: non-equivalent arrays
-assertEqual(eqArrays([1, 2, 3], [1, 4, 3]), false); // => should PASS
-
-//Test case 3: arrays of different length
-assertEqual(eqArrays([1, 2, 3], [1, 2]), false); // => should PASS
 
 
 module.exports = eqArrays;
