@@ -12,7 +12,7 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Install it:**
 ```
-npm install @ryjcm1/lotide
+npm install @ryjcm1/lotide@1.0.1
 ```
 
 **Require it:**
